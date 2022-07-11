@@ -58,7 +58,7 @@ const ButtonText = styled.Text`
 `;
 
 export const ProfilePageConnector = () => {
-  const [emailInput, setEmailInput] = useState('');
+  const [emailInput, setEmailInput] = useState('gogo@gmail.com');
 
   return (
     <ProfileWrapper>
