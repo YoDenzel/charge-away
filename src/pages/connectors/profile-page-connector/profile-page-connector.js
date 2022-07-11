@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 import {ProfileInfo} from '../../../shared/ui';
 
