@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FlatList} from 'react-native';
+import {ListItem} from '../../../shared/ui';
 
 const OrdersHistoryWrapper = styled.View`
   height: 100%;
@@ -46,39 +47,8 @@ export const OrdersHistoryConnector = () => {
       <OrdersList
         data={orders}
         keyExtractor={orders => orders.id}
-        renderItem={item => <OrderItem item={item.item} />}
+        renderItem={item => <ListItem item={item.item} />}
       />
     </OrdersHistoryWrapper>
-  );
-};
-
-const OrderItemContainer = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-`;
-
-const OrderItemTitle = styled.Text`
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 22px;
-  letter-spacing: 0.38px;
-`;
-
-const OrderItemDate = styled.Text`
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 22px;
-  letter-spacing: 0.38px;
-`;
-
-export const OrderItem = ({item}) => {
-  return (
-    <OrderItemContainer>
-      <OrderItemTitle>{item.title}</OrderItemTitle>
-      <OrderItemDate>{item.date}</OrderItemDate>
-    </OrderItemContainer>
   );
 };

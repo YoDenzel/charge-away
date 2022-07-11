@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FlatList} from 'react-native';
+import {ListItem} from '../../../shared/ui';
 
 const PaymentMethodsWrapper = styled.View`
   width: 100%;
@@ -28,9 +29,9 @@ const PaymentsList = styled(FlatList)`
 
 export const PaymentMethodsConnector = () => {
   const paymentMethods = [
-    {title: 'Visa', id: 1},
-    {title: 'MasterCard', id: 2},
-    {title: 'Bankoff', id: 3},
+    {title: 'Visa', date: '01-09-1994', id: 1},
+    {title: 'MasterCard', date: '12-02-2018', id: 2},
+    {title: 'Bankoff', date: '22-07-2021', id: 3},
   ];
 
   return (
@@ -39,31 +40,8 @@ export const PaymentMethodsConnector = () => {
       <PaymentsList
         data={paymentMethods}
         keyExtractor={item => item.id}
-        renderItem={item => <PaymentItem item={item.item} />}
+        renderItem={item => <ListItem item={item.item} />}
       />
     </PaymentMethodsWrapper>
-  );
-};
-
-const PaymentItemContainer = styled.View`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-`;
-
-const PaymentItemTitle = styled.Text`
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 22px;
-  letter-spacing: 0.38px;
-`;
-
-export const PaymentItem = ({item}) => {
-  return (
-    <PaymentItemContainer>
-      <PaymentItemTitle>{item.title}</PaymentItemTitle>
-    </PaymentItemContainer>
   );
 };
