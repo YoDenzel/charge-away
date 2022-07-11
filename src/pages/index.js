@@ -1,2 +1,2 @@
 export {ProfilePageConnector} from './connectors';
-export {StackNavigation} from './app-navigation';
+export {StackNavigation, TabsNavigation} from './app-navigation';
