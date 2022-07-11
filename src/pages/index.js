@@ -3,4 +3,4 @@ export {
   OrdersHistoryConnector,
   PaymentMethodsConnector,
 } from './connectors';
-export {StackNavigation, TabsNavigation} from './app-navigation';
+export {TabsNavigation} from './app-navigation';
